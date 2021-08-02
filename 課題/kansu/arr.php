@@ -5,7 +5,7 @@ function arr($arr){
     foreach($arr as $a){
         $total *=  $a;
         }
-    return $a;
+    return $total;
 }
 
-echo arr(1, 3, 5, 7, 9) . "\n";
+echo arr([1, 3, 5, 7, 9]) . "\n";
