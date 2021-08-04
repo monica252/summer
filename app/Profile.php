@@ -12,4 +12,9 @@ class Profile extends Model
         'hobby' => 'required',
         'introduction' => 'required'
     );
+
+    public function edit()
+{
+  return $this->hasMany('App\Edit');
+}
 }
