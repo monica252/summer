@@ -6,15 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
-    public static $rules = array(
-        'name' => 'required',
-        'gender' => 'required',
-        'hobby' => 'required',
-        'introduction' => 'required'
-    );
+    protected $guarded = ['id'];
+
+    public static $rules = [
+        "name" => "required",
+        "gender" => "required",
+        "hobby" => "required",
+        "introduction" => "required",
+    ];
 
     public function edit()
-{
-  return $this->hasMany('App\Edit');
-}
+    {
+        return $this->hasMany("App\Edit");
+    }
 }
