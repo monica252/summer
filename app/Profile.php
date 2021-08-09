@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
-    protected $guarded = ['id'];
+    protected $guarded = ["id"];
 
     public static $rules = [
         "name" => "required",
@@ -15,8 +15,8 @@ class Profile extends Model
         "introduction" => "required",
     ];
 
-    public function edit()
+    public function histories()
     {
-        return $this->hasMany("App\Edit");
+        return $this->hasMany("App\Prohis");
     }
 }
